@@ -34,8 +34,12 @@
 body{
     background-color: #f3f3f3;
 }
-button, .head, #total,  .tableHead{
+button, .head, #total, .tableHead{
     background-color: var(--headbtnclr);
+}
+
+button:hover, #update:hover, #delete:hover{
+    background-color: #3e8feb;
 }
 
 .ttttt{ background-color: #f44336;}
@@ -67,7 +71,9 @@ input{
     height: 75px;
     text-align: center;
     border-radius: 15px;
-    box-shadow: var(--shado);
+    /* box-shadow: var(--shado); */
+    border: 2px solid #000000; 
+    
 }
   
 .inputs-div{
@@ -112,12 +118,6 @@ button{
     box-shadow: var(--shado);
 }
 
-
-button:hover{
-    /* transform: scale(1.02); */
-    background-color: var(--hover-color);
-    letter-spacing: 0.05em;    
-}
 .btnSearch{
     display: flex;
     gap: 10px;
@@ -141,6 +141,7 @@ table{
 
 #delete , #update, th{
     background-color: #c5a8a8;
+    /* background-color: #910000; */
     box-shadow: var(--shado);
     text-transform: uppercase;
     border-radius: 15px;
