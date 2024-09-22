@@ -138,9 +138,9 @@ table{
 } 
 
 
-
 #delete , #update, th{
-    background-color: #c5a8a8;
+    /* background-color: #c5a8a8; */
+    background-color: #a59cdb;
     box-shadow: var(--shado);
     text-transform: uppercase;
     border-radius: 15px;
