@@ -33,7 +33,7 @@
     background-color: #f44336;
 }
 body{
-    background-color: #c5c5c5;
+    background-color: #ffd3d3;
 }
 button, .head, #total, .tableHead{
     background-color: var(--headbtnclr);
