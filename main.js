@@ -46,7 +46,7 @@ submit.onclick = function(){
         furniture:furniture.value,
         utilities:utilities.value,
         sqm:sqm.value,
-        price:price.innerHTML,
+        price:price.value,
         count:count.value,
         stats: stats.value.toLowerCase(),
     }
@@ -65,7 +65,7 @@ submit.onclick = function(){
         mood = 'create';
         submit.innerHTML = 'create';
         count.style.display = 'block';
-        price.style.backgroundColor = getComputedStyle(root).getPropertyValue('--button-color-2'); 
+        // price.style.backgroundColor = getComputedStyle(root).getPropertyValue('--button-color-2'); 
     }
 
     
@@ -87,7 +87,7 @@ function clearData(){
     furniture.value = '';
     utilities.value = '';
     sqm.value = '';
-    price.innerHTML = 'price';
+    price.value = '';
     count.value = '';
     stats.value = '';
 }
@@ -109,7 +109,7 @@ function showData()
                 <td class='colorText'>${dataPro[i].utilities}</td>
                 <td class='colorText'>${dataPro[i].sqm}</td>
                 <td class='colorText'>${dataPro[i].price}</td>
-                <td id='qqq' class='colorText'>${dataPro[i].stats}</td>
+                <td class='colorText'>${dataPro[i].stats}</td>
                 <td class='colorText'><button onclick= "updateData(${i})" id="update">update</button></td>
                 <td class='colorText'><button onclick="deleteData(${i})" id="delete">delete</button></td>
             </tr>
@@ -135,6 +135,18 @@ changeRowColor("table")
 
 
 
+function addUnit(){
+    const fields = document.getElementById("inpusId");
+    const buttonFld = document.getElementById("addUnit");
+    if(fields.style.display == "none"){
+        fields.style.display = "block";
+        buttonFld.innerHTML = "Hide Fields"
+    }else{
+        fields.style.display = "none";
+        buttonFld.innerHTML = "Add Unit"
+    }
+    
+}
 
 function changeRowColor(tableId) {
     // Get the table element by its ID
@@ -267,7 +279,7 @@ function searchData(value)
                     <td>${dataPro[i].utilities}</td>
                     <td>${dataPro[i].sqm}</td>
                     <td>${dataPro[i].price}</td>
-                    <td id="myTd" class="ww">${dataPro[i].stats}</td>
+                    <td>${dataPro[i].stats}</td>
                     <td><button onclick= "updateData(${i})" id="update">update</button></td>
                     <td><button onclick="deleteData(${i})" id="delete">delete</button></td>
                 </tr>

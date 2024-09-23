@@ -10,27 +10,31 @@
     <div class="crud">
 
         <div class="head">
-            <h3>Leasesys</h3>
-            <p>leasesys-frems-bymyprogramsside</p>
+            <div class="headBtnLeft">
+                <button id="dedecated">dedecated</button>
+                <button id="dedecated">dedecated</button>
+            </div>
+            <div>
+                <h3>Leasesys</h3>
+                <p>leasesys-frems-bymyprogramsside</p>
+            </div>
+            <div class="headBtnRight">
+                <button onclick="addUnit()" id="addUnit">Add Unit</button>
+                <button id="dedecated">dedecated</button>
+            </div>
         </div>
 
 
-        <div class="inputs-div">
-            <input placeholder="area" type="text" id="area">
-            <div class="bedrooms">
-                <input type="number" id="bedrooms" placeholder="bedrooms">
-                <input type="text" id="furniture" placeholder="furniture">
-                <input type="text" id="utilities" placeholder="utilities">
-                <input type="number" id="sqm" placeholder="sqm">
-                <input type="number" id="price" placeholder="price">
-                
-
-            </div>
-            <div>
-                <input placeholder="count" type="number" id="count">
-                <input placeholder="stats" type="text" id="stats">
-                <button id="submit">Create</button>
-            </div>    
+        <div id ="inpusId" class="inputs-div">
+            <input type="text" id="area" placeholder="area" >
+            <input type="number" id="bedrooms" placeholder="bedrooms">
+            <input type="text" id="furniture" placeholder="furniture">
+            <input type="text" id="utilities" placeholder="utilities">
+            <input type="number" id="sqm" placeholder="sqm">
+            <input type="number" id="price" placeholder="price">
+            <input type="number" id="count" placeholder="count">
+            <input type="text" id="stats" placeholder="stats">
+            <button id="submit">Create</button>
         </div>
 
         <div class="outputs">

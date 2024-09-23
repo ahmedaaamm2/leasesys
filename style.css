@@ -15,6 +15,7 @@
 
 :root{
     --shado: 2px 2px 2px 1px #000001;
+    --shadoless: 0px 0px 0px 0px #e2e2e2;
     --body-background: green;
     --main-background: #b4d6df;
     --button-color-0: #797979;
@@ -29,9 +30,6 @@
 }   
 
 
-.tdClass{
-    background-color: #f44336;
-}
 body{
     background-color: #bbbbbb;
 }
@@ -67,11 +65,13 @@ input{
 }
 .head{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: center;
     height: 75px;
     text-align: center;
     border-radius: 15px;
+    padding: 0 10px;
     /* box-shadow: var(--shado); */
     border: 2px solid #000000; 
     
@@ -81,15 +81,15 @@ input{
     padding: 0 5px;
     /* margin: 8px 0; */
     border-radius: 15;
+    display: none;
 }    
-
 
 .outputs{
     display: flex;
     flex-direction: column;
     gap: .5em;
     padding: 10px 0;
-    border-radius: 15px;
+    /* border-radius: 15px; */
 }
 
 input:focus{
@@ -124,7 +124,7 @@ button{
 table{
     width: 100%;
     text-align: center;
-    border-spacing: 10px;
+    border-spacing: 0 5px;
     table-layout: auto !important;
 } 
 
@@ -132,11 +132,8 @@ td:hover{
     background-color: #3e8feb;
 }
 
-#delete , #update, th{
+#delete , #update{
     background-color: #c5a8a8;
-    /* background-color: #9dd8f3; */
-    
-    /* background-color: #910000; */
     box-shadow: var(--shado);
     text-transform: uppercase;
     border-radius: 15px;
@@ -145,30 +142,56 @@ td:hover{
     color: #000000;
 }
 
-
+th{
+    background-color: #c5a8a8;
+    box-shadow: var(--shado);
+    text-transform: uppercase;
+    /* border-radius: 15px; */
+    height: 60px;
+    font: bold;
+    color: #000000;
+}
 td{
     padding: 2px;
     /* background-color: #40a113; */
-    border-radius: 15px;
-    border-spacing: 30px;
+    /* border-radius: 15px; */
     color: #000000;
     font: bold;
-    height: 10px;
+    height: 5px;
 }
 
-table tr td:nth-child(9), td:nth-child(10){
+/* table tr td:nth-child(9), td:nth-child(10){
     background-color: white;
+} */
+
+
+
+#dedecated, #addUnit{
+    height: fit-content;
+    padding: 0 8px;
+    box-shadow: var(--shadoless);
+
+}
+
+.headBtnLeft{
+    height: 60px;
+    /* background-color: #3e8feb; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+
 }
 
 
-.even{background-color: #cc1515;} 
-.product-row{background-color: #152dcc;}
-.ww{background-color: #cc15b4;}
+.headBtnRight{
+    height: 60px;
+    /* background-color: #3e8feb; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 
-
-
-
-
+}
 
 
 
@@ -245,5 +268,7 @@ table tr td:nth-child(9), td:nth-child(10){
     }
 
 }   
+
+
 
 
