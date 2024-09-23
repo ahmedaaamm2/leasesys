@@ -9,6 +9,7 @@
     text-transform: capitalize;
     font-family: system-ui;
 
+
 }
 
 
@@ -32,7 +33,7 @@
     background-color: #f44336;
 }
 body{
-    background-color: #f3f3f3;
+    background-color: #ffc4c4;
 }
 button, .head, #total, .tableHead{
     background-color: var(--headbtnclr);
@@ -137,7 +138,9 @@ table{
     table-layout: auto !important;
 } 
 
-
+td:hover{
+    background-color: #3e8feb;
+}
 
 #delete , #update, th{
     background-color: #c5a8a8;
