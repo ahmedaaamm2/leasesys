@@ -137,11 +137,7 @@ table{
     box-shadow: var(--shado);
     text-transform: uppercase;
     border-radius: 15px;
-<<<<<<< HEAD
-    height: 29px;
-=======
-    height: 25px;
->>>>>>> master
+    height: 28px;
     font: bold;
     color: #000000;
     margin-bottom: 4px;
