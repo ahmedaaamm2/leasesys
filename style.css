@@ -128,18 +128,19 @@ table{
     table-layout: auto !important;
 } 
 
-td:hover{
+/* td:hover{
     background-color: #3e8feb;
-}
+} */
 
 #delete , #update{
     background-color: #c5a8a8;
     box-shadow: var(--shado);
     text-transform: uppercase;
     border-radius: 15px;
-    height: 60px;
+    height: 30px;
     font: bold;
     color: #000000;
+    margin-bottom: 4px;
 }
 
 th{
@@ -158,6 +159,8 @@ td{
     color: #000000;
     font: bold;
     height: 5px;
+    padding: 5px;
+    
 }
 
 /* table tr td:nth-child(9), td:nth-child(10){
