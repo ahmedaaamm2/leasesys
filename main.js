@@ -1,8 +1,3 @@
-// test .js file linked or not
-// alert("ahmed")
-
-    /* all buttons = #e28743   this is for css  */
-    /* cruds background = #76b5c5     this is for css  */
 
 // call items 
 let id = document.getElementById('id');
@@ -158,15 +153,15 @@ function changeRowColor(tableId) {
         const CellValue = row.cells[7].innerText;
 
         // Change the row color based on the context (value in the first cell)
-        if (CellValue === 'A') {
-            row.style.backgroundColor = '#7F9F80';
-        } else if (CellValue === 'B') {
+        if (CellValue === 'Booked') {
             row.style.backgroundColor = '#F9E897';
-        } else if (CellValue === 'C') {
+        } else if (CellValue === 'Contract') {
             row.style.backgroundColor = '#FFC374';
-        } else if (CellValue === 'D') {
-            row.style.backgroundColor = '#D5ED9F';    
-        } else if (CellValue === 'E') {
+        } else if (CellValue === 'Leased') {
+            row.style.backgroundColor = '#e6aaaa'; 
+        } else if (CellValue === 'Deposit') {
+            row.style.backgroundColor = '#EECAD5';         
+        } else if (CellValue === 'Onhold') {
             row.style.backgroundColor = '#b7e5fa';      
         } else {
             row.style.backgroundColor = 'white'; // Default color
@@ -176,15 +171,10 @@ function changeRowColor(tableId) {
 
 
 
-// function btnClick() {
-//     for(let i = 0; i < dataPro.length; i++){
-//         var x = document.getElementById("table").getElementsByTagName("td");
-        
-//     }              
-//     }
 // count
-// delete
 
+
+// delete
 function deleteData(i){
     dataPro.splice(i,1);
     localStorage.product = JSON.stringify(dataPro)
@@ -193,8 +183,8 @@ function deleteData(i){
     
 }
 
-// delet all
 
+// delet all
 function deleteAll(){
     localStorage.clear()
     dataPro.splice(0)
@@ -204,7 +194,6 @@ function deleteAll(){
 
 
 // update
-
 function updateData(i){
     area.value = dataPro[i].area;
     bedrooms.value = dataPro[i].bedrooms;
@@ -243,8 +232,8 @@ search.placeholder = 'Search By ' + searchMood;
 search.value = '';
 showData();
 changeRowColor("table")
-
 }
+
 
 
 function searchData(value)
@@ -289,6 +278,7 @@ function searchData(value)
     }
  
     document.getElementById('tbody').innerHTML = table;
+    changeRowColor("table")
 }   
     
       
@@ -315,21 +305,3 @@ function searchData(value)
 
 
 
-
-
-// for(let i = 0; i < dataPro.length; i++){
-//     if(dataPro[i].stats.includes('A')){
-//         console.log('has a');
-        // var x = document.getElementById("table");
-        // var x = document.getElementById("table").getElementsByTagName("td");
-        
-    //     x.style.backgroundColor = 'red';
-
-    // }else{
-    //     console.log('no');
-    // }
-    // console.log(i);
-    // i.style.backgroundColor =  'red';
-    // ssss = document.getElementById("table");
-    // ssss.rows[0].cells[9].style.backgroundColor = 'red';
-// }
