@@ -31,7 +31,9 @@
 
 
 body{
-    background-color: #c9c9c9;
+    background-color: #c2bdbd;
+    /* display: block; */
+
 }
 button, .head, .tableHead{
     background-color: var(--headbtnclr);
@@ -47,7 +49,7 @@ button:hover, #update:hover, #delete:hover{
     display: flex;
     flex-direction: column;
     /* background-color: var(--main-background); */
-    width: 70%;
+    width: 80%;
     padding: 0.5em .3em;
     gap: .3em; 
     margin: auto;
@@ -65,16 +67,85 @@ input{
 }
 .head{
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     height: 90px;
     text-align: center;
     border-radius: 15px;
     padding: 0 10px;
-    /* box-shadow: var(--shado); */
-    border: 2px solid #000000; 
+    box-shadow: var(--shado);
+    border: 2px solid #000000;   
+    margin-bottom: 5px;
     
+}
+
+#dedecated, #addUnit{
+    height: fit-content;
+    width: 100px;
+    padding: 0 8px;
+    box-shadow: var(--shadoless);
+    background-color: #c4c4c4;
+    font-weight: lighter;
+    border: .5px solid #000000;
+    background-color: #c5a8a8;
+    /* background-color: #bad8fa; */
+}
+
+.headTop{
+    /* background-color: #bad8fa; */
+    border-radius: 20px;
+    border: .5px solid #000000;
+    display: flex;
+    align-items: center;
+    /* height: 50px; */
+    padding: 3px 10px;
+    margin-top: 8px;
+}
+
+.headBottom{
+    height: 60px;
+    width: 100%;
+    /* background-color: #3e8feb; */
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-around;
+    align-items: center;
+}
+
+.head, th{
+    background-color: #c5a8a8;
+    /* background-color: #e4c359; */
+}
+
+.filter{
+    height: 20px;
+    display: flex;
+    padding: 17px ; 
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;  
+    align-items: center;
+    /* background-color: #31e70c; */
+}
+
+.btnId{
+    /* background-color: #007bff; */
+    color: rgb(0, 0, 0);
+    border: none;
+    /* padding: 10px 20px; */
+    margin: 5px;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+    /* background-color: #f0cfcc; */
+    border-radius: 15px;
+    height: 25PX;
+}
+
+.btnId:hover {
+    transform: translateX(5px);
 }
   
 .inputs-div{
@@ -88,7 +159,7 @@ input{
     display: flex;
     flex-direction: column;
     gap: .5em;
-    padding: 10px 0;
+    /* padding: 10px 0; */
     /* border-radius: 15px; */
 }
 
@@ -99,14 +170,15 @@ input:focus{
   
 button{
     width: 100%;
-    height: 40px;
+    height: 35px;
     border-radius: 7px;
     /* padding: 4px 0; */
     outline: none;
     border: none;
     /* color: white; */
-    margin: 3px 0 0 0;
+    /* margin: 3px 0 0 0; */
     box-shadow: var(--shado);
+    background-color: #faecea;
 }
 
 .btnSearch{
@@ -121,11 +193,22 @@ button{
 #deleteAll{
     margin: 20px 0;
 }
+
+.table-div{
+    display: flex;
+    justify-content: center;
+    /* flex-direction: row; */
+    /* background-color: var(--main-background); */
+    width: 100%;
+    padding: 0.5em .3em;
+    gap: .3em; 
+    margin: auto;
+}
 table{
     width: 100%;
     text-align: center;
     border-spacing: 0 6px;
-    table-layout: auto !important;
+    
 } 
 
 td:hover{
@@ -133,15 +216,16 @@ td:hover{
 }
 
 #delete , #update{
-    background-color: #e7cccc;
+    background-color: #eeada7;
     box-shadow: var(--shado);
-    text-transform: uppercase;
+    text-transform: capitalize;
     border-radius: 15px;
     height: 28px;
     font: bold;
     color: #000000;
     margin-bottom: 4px;
 }
+
 
 th{
     background-color: #c5a8a8;
@@ -150,11 +234,11 @@ th{
     /* border-radius: 15px; */
     height: 50px;
     font: bold;
-    color: #000000;
+    color: #111111;
+    
+    
 }
 td{
-    /* background-color: #40a113; */
-    /* border-radius: 15px; */
     color: #000000;
     font: bold;
     height: 5px;
@@ -167,43 +251,14 @@ td{
 } */
 
 
-#dedecated, #addUnit{
-    height: fit-content;
-    padding: 0 8px;
-    box-shadow: var(--shadoless);
-    background-color: #c5a8a8;
-    font-weight: lighter;
-    
-
-}
-
-.headBtnLeft{
-    height: 60px;
-    /* background-color: #3e8feb; */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-
-
-}
-
-
-.headBtnRight{
-    height: 60px;
-    /* background-color: #3e8feb; */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.head{
-    background-color: #c5a8a8;
-}
 
 
 
 
- @media only screen and (max-width: 600px) {
+
+
+
+@media only screen and (max-width: 900px) {
     *{
         padding: 0px;
         margin: 0px;
@@ -274,7 +329,3 @@ td{
     }
 
 }   
-
-
-
-

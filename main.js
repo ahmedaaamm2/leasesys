@@ -136,6 +136,7 @@ function addUnit(){
     if(fields.style.display == "none"){
         fields.style.display = "block";
         buttonFld.innerHTML = "Hide Fields"
+        
     }else{
         fields.style.display = "none";
         buttonFld.innerHTML = "Add Unit"
@@ -154,17 +155,17 @@ function changeRowColor(tableId) {
 
         // Change the row color based on the context (value in the first cell)
         if (CellValue === 'Booked') {
-            row.style.backgroundColor = '#F9E897';
+            row.style.backgroundColor = '#faf9d9';
         } else if (CellValue === 'Contract') {
-            row.style.backgroundColor = '#FFC374';
+            row.style.backgroundColor = '#fae6d9';
         } else if (CellValue === 'Leased') {
-            row.style.backgroundColor = '#e6aaaa'; 
+            row.style.backgroundColor = '#f7d9fd'; 
         } else if (CellValue === 'Deposit') {
-            row.style.backgroundColor = '#EECAD5';         
+            row.style.backgroundColor = '#e2d9fd';         
         } else if (CellValue === 'Onhold') {
             row.style.backgroundColor = '#b7e5fa';      
         } else {
-            row.style.backgroundColor = 'white'; // Default color
+            row.style.backgroundColor = '#e3fad9'; // Default color
         }
     }
 }
@@ -285,7 +286,33 @@ function searchData(value)
         
 
         
-      
+// function for filter div located under head div
+
+function createButtons(names) {
+    const container = document.getElementById('filterDiv');
+    container.innerHTML = ''; // Clear previous buttons
+
+    names.forEach(name => {
+        const button = document.createElement('button');
+        button.textContent = name;
+        button.className = "btnId";
+        button.id = generateRandomId();
+        button.onclick = () => alert(`${name + " " +  button.className + " " + button.id } clicked!`);
+        container.appendChild(button);
+    });
+}
+
+// Example array of names
+const namesArray = ['Button 1', 'Button 2', 'Button 3', 'Button 1', 'Button 2', 'Button 3', 'Button 1', 'Button 2', 'Button 3'];
+createButtons(namesArray);
+
+
+
+// function to generate a random id
+function generateRandomId() {
+    return 'btn-' + Math.random().toString(36).substr(2, 9);
+}
+
 
 
 // clean data
